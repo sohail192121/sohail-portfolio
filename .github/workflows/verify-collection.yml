@@ -1,0 +1,35 @@
+name: Verify bundled projects
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include: [{"slug": "identity-access-service", "runtime": "dotnet"}, {"slug": "event-ingestion-platform", "runtime": "python"}, {"slug": "async-api-celery-workers", "runtime": "python"}, {"slug": "search-ranking-service", "runtime": "python"}, {"slug": "distributed-rate-limiter", "runtime": "go"}, {"slug": "queue-worker-framework", "runtime": "go"}, {"slug": "domain-booking-service", "runtime": "go"}, {"slug": "internal-developer-platform", "runtime": "python"}, {"slug": "chaos-disaster-recovery", "runtime": "python"}, {"slug": "cloud-cost-drift-control", "runtime": "python"}]
+    defaults:
+      run:
+        working-directory: projects/${{ matrix.slug }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        if: matrix.runtime == 'python'
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-go@v5
+        if: matrix.runtime == 'go'
+        with:
+          go-version: '1.23'
+      - uses: actions/setup-dotnet@v4
+        if: matrix.runtime == 'dotnet'
+        with:
+          dotnet-version: '9.0.x'
+      - run: python -m unittest discover -s tests -v
+        if: matrix.runtime == 'python'
+      - run: go test -race ./...
+        if: matrix.runtime == 'go'
+      - run: dotnet run
+        if: matrix.runtime == 'dotnet'

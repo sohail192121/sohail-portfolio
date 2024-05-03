@@ -1,0 +1,381 @@
+[
+  {
+    "group": "Full Stack",
+    "slug": "email-campaign-platform",
+    "title": "Multi-Tenant Email Campaign Platform",
+    "stack": "React, TypeScript, Node.js, PostgreSQL",
+    "features": [
+      "CSV import",
+      "templates",
+      "throttled sending",
+      "bounce events",
+      "unsubscribe enforcement"
+    ],
+    "implemented": "Tenant isolation and unsubscribe enforcement in the domain core",
+    "pending": [
+      "Durable queue",
+      "email provider adapter",
+      "React campaign editor",
+      "verified webhook signatures"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/email-campaign-platform"
+  },
+  {
+    "group": "Full Stack",
+    "slug": "workflow-automation-builder",
+    "title": "Workflow Automation Builder",
+    "stack": "React, TypeScript, Node.js, PostgreSQL",
+    "features": [
+      "visual rules",
+      "scheduled triggers",
+      "bounded retries",
+      "execution history"
+    ],
+    "implemented": "Cycle detection, ordered execution and bounded retries",
+    "pending": [
+      "Visual React editor",
+      "durable schedules",
+      "worker leases",
+      "database execution history"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/workflow-automation-builder"
+  },
+  {
+    "group": "Full Stack",
+    "slug": "lead-management-crm",
+    "title": "Lead Management CRM",
+    "stack": "React, TypeScript, Node.js, PostgreSQL",
+    "features": [
+      "tenant search",
+      "assignment rules",
+      "activity timeline",
+      "permissions"
+    ],
+    "implemented": "Tenant-scoped search, assignment and activity tracking",
+    "pending": [
+      "React screens",
+      "JWT authentication",
+      "PostgreSQL persistence",
+      "cursor pagination"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/lead-management-crm"
+  },
+  {
+    "group": "Java",
+    "slug": "transactional-payment-ledger",
+    "title": "Transactional Payment Ledger",
+    "stack": "Java 21, Spring Boot, PostgreSQL",
+    "features": [
+      "balanced entries",
+      "idempotency",
+      "outbox pattern",
+      "reconciliation"
+    ],
+    "implemented": "Balanced postings, idempotency and an in-memory outbox",
+    "pending": [
+      "Spring HTTP adapter",
+      "database atomicity",
+      "outbox publisher",
+      "reconciliation jobs"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/transactional-payment-ledger"
+  },
+  {
+    "group": "Java",
+    "slug": "distributed-job-scheduler",
+    "title": "Distributed Job Scheduler",
+    "stack": "Java 21, Spring Boot, Quartz, PostgreSQL",
+    "features": [
+      "clustered scheduling",
+      "leader election",
+      "leases",
+      "dead-letter queue"
+    ],
+    "implemented": "Lease expiry, exclusive claims and bounded retries in one process",
+    "pending": [
+      "Clustered Quartz persistence",
+      "multi-node fencing",
+      "leader election",
+      "clock-skew tests"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/distributed-job-scheduler"
+  },
+  {
+    "group": "Java",
+    "slug": "event-driven-notification-service",
+    "title": "Event-Driven Notification Service",
+    "stack": "Java 21, Spring Boot, Kafka",
+    "features": [
+      "tenant limits",
+      "event deduplication",
+      "retry topics",
+      "delivery receipts"
+    ],
+    "implemented": "Tenant rate windows and successful-event deduplication",
+    "pending": [
+      "Kafka adapter",
+      "retry topics",
+      "delivery receipts",
+      "provider integration"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/event-driven-notification-service"
+  },
+  {
+    "group": ".NET",
+    "slug": "saga-order-orchestrator",
+    "title": "Saga-Based Order Orchestrator",
+    "stack": "C#, .NET 9, message bus, PostgreSQL",
+    "features": [
+      "compensations",
+      "message handling",
+      "resilience",
+      "order state"
+    ],
+    "implemented": "Reverse-order compensation and explicit failure states",
+    "pending": [
+      "Durable saga state",
+      "message bus adapter",
+      "Polly policies",
+      "crash recovery"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/saga-order-orchestrator"
+  },
+  {
+    "group": ".NET",
+    "slug": "clean-architecture-tenant-api",
+    "title": "Clean Architecture Multi-Tenant API",
+    "stack": "C#, ASP.NET Core, EF Core, PostgreSQL",
+    "features": [
+      "tenant isolation",
+      "domain boundaries",
+      "integration tests",
+      "auditing"
+    ],
+    "implemented": "Tenant-scoped repository operations and defensive tenant checks",
+    "pending": [
+      "ASP.NET endpoints",
+      "EF Core adapter",
+      "PostgreSQL row policies",
+      "authentication middleware"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/clean-architecture-tenant-api"
+  },
+  {
+    "group": ".NET",
+    "slug": "identity-access-service",
+    "title": "Identity and Access Service",
+    "stack": "C#, ASP.NET Core, PostgreSQL",
+    "features": [
+      "refresh rotation",
+      "RBAC",
+      "audit trail",
+      "revocation"
+    ],
+    "implemented": "Hashed opaque refresh tokens, one-time rotation and role checks",
+    "pending": [
+      "ASP.NET JWT issuer",
+      "password hashing",
+      "token-family replay revocation",
+      "durable audit store"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/identity-access-service"
+  },
+  {
+    "group": "Python",
+    "slug": "event-ingestion-platform",
+    "title": "Event Ingestion Platform",
+    "stack": "Python, FastAPI, PostgreSQL, Kafka",
+    "features": [
+      "backpressure",
+      "schema versions",
+      "deduplication",
+      "replay"
+    ],
+    "implemented": "Bounded intake, version checks, duplicate detection and replay",
+    "pending": [
+      "FastAPI transport",
+      "durable Kafka log",
+      "consumer offsets",
+      "distributed deduplication"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/event-ingestion-platform"
+  },
+  {
+    "group": "Python",
+    "slug": "async-api-celery-workers",
+    "title": "Async API with Celery Workers",
+    "stack": "Python, FastAPI, Celery, Redis",
+    "features": [
+      "task priorities",
+      "bounded retries",
+      "dead letters",
+      "load tests"
+    ],
+    "implemented": "Stable priority scheduling, bounded retries and dead-letter capture",
+    "pending": [
+      "FastAPI routes",
+      "Celery Redis adapter",
+      "distributed result store",
+      "k6 load measurements"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/async-api-celery-workers"
+  },
+  {
+    "group": "Python",
+    "slug": "search-ranking-service",
+    "title": "Search and Ranking Service",
+    "stack": "Python, FastAPI, Elasticsearch",
+    "features": [
+      "tenant indexing",
+      "ranking",
+      "filters",
+      "relevance evaluation"
+    ],
+    "implemented": "Tenant-scoped lexical ranking and deterministic tie breaking",
+    "pending": [
+      "Elasticsearch adapter",
+      "FastAPI endpoint",
+      "judged relevance dataset",
+      "ranking experiments"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/search-ranking-service"
+  },
+  {
+    "group": "Go",
+    "slug": "distributed-rate-limiter",
+    "title": "Distributed Rate Limiter",
+    "stack": "Go, Redis, Lua",
+    "features": [
+      "token bucket",
+      "atomic admission",
+      "tenant keys",
+      "benchmarks"
+    ],
+    "implemented": "Mutex-protected token bucket with injected clock",
+    "pending": [
+      "Redis Lua implementation",
+      "multi-process atomicity",
+      "HTTP middleware",
+      "benchmarks"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/distributed-rate-limiter"
+  },
+  {
+    "group": "Go",
+    "slug": "queue-worker-framework",
+    "title": "Queue Worker Framework",
+    "stack": "Go, PostgreSQL",
+    "features": [
+      "concurrency control",
+      "retries",
+      "shutdown",
+      "dead letters"
+    ],
+    "implemented": "Bounded worker concurrency, cancellation and retries",
+    "pending": [
+      "Durable queue adapter",
+      "lease recovery",
+      "jitter",
+      "operational metrics"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/queue-worker-framework"
+  },
+  {
+    "group": "Go",
+    "slug": "domain-booking-service",
+    "title": "Domain-Driven Booking Service",
+    "stack": "Go, PostgreSQL",
+    "features": [
+      "booking invariants",
+      "overlap prevention",
+      "transactions",
+      "tenant isolation"
+    ],
+    "implemented": "Tenant-scoped half-open intervals and atomic overlap checks in memory",
+    "pending": [
+      "PostgreSQL exclusion constraints",
+      "HTTP adapter",
+      "idempotency",
+      "database integration tests"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/domain-booking-service"
+  },
+  {
+    "group": "DevOps",
+    "slug": "internal-developer-platform",
+    "title": "Internal Developer Platform",
+    "stack": "Backstage, Terraform, GitHub Actions, ArgoCD",
+    "features": [
+      "service templates",
+      "namespace isolation",
+      "GitOps",
+      "monitoring"
+    ],
+    "implemented": "Validated local service generator with Kubernetes and ArgoCD manifests",
+    "pending": [
+      "Backstage catalog",
+      "GitHub provisioning adapter",
+      "Terraform environment modules",
+      "cluster verification"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/internal-developer-platform"
+  },
+  {
+    "group": "DevOps",
+    "slug": "chaos-disaster-recovery",
+    "title": "Chaos and Disaster Recovery Drills",
+    "stack": "Kubernetes, Chaos Mesh, Velero, PostgreSQL",
+    "features": [
+      "failure experiments",
+      "restore verification",
+      "RTO",
+      "RPO"
+    ],
+    "implemented": "Non-destructive backup/restore checksum drill with measured local timing",
+    "pending": [
+      "Multi-zone cluster",
+      "Chaos Mesh experiments",
+      "Velero backup",
+      "PostgreSQL restore validation"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/chaos-disaster-recovery"
+  },
+  {
+    "group": "DevOps",
+    "slug": "cloud-cost-drift-control",
+    "title": "Cloud Cost and Drift Control",
+    "stack": "Python, Terraform, AWS Cost Explorer, Infracost",
+    "features": [
+      "drift detection",
+      "tag policy",
+      "idle resources",
+      "cost reports"
+    ],
+    "implemented": "Offline inventory policy and drift report, with no cloud mutations",
+    "pending": [
+      "Read-only AWS collector",
+      "Terraform plan adapter",
+      "Infracost estimates",
+      "scheduled reports"
+    ],
+    "status": "Core prototype",
+    "repositoryUrl": "https://github.com/sohail-sharif-official/sohail-portfolio/tree/main/projects/cloud-cost-drift-control"
+  }
+]
